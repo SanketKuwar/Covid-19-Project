@@ -1,5 +1,7 @@
 # 🚀 PROJECT ARCHITECTURE - COVID 19 PROJECT
 
+![Project Image](https://github.com/SanketKuwar/Covid-19-Project/blob/main/Covid%2019%20Images/Image.png)
+
 ## PROJECT OVERVIEW
 
 ### Tech Stacks:
@@ -29,6 +31,8 @@ Welcome to my project where the synergy of Azure technologies orchestrates seaml
 
 ## INGESTION
 
+![Project Image](https://github.com/SanketKuwar/Covid-19-Project/blob/main/Covid%2019%20Images/Injection_activity_1.png)
+
 Embark on the data collection odyssey from Azure Blob Storage to our data lake, courtesy of Azure Data Factory:
 
 ### 1. Data Ingestion from Azure Blob
@@ -54,6 +58,8 @@ Witness the metamorphosis of cases, deaths, and hospital admission data with enc
 
 ### 1. Transformation using Data Flows
 
+![Project Image](https://github.com/SanketKuwar/Covid-19-Project/blob/main/Covid%2019%20Images/Cases_Tranform.png)
+
 #### Data Flows - Cases & Deaths Data Transformation:
 
 A tale told in transformational steps:
@@ -65,6 +71,8 @@ A tale told in transformational steps:
 - ✅ **Sync Transformations:** Ensuring synchronized and updated transformed data.
 
 #### Data Flows - Hospital Admissions Data Transformation:
+
+![Project Image](https://github.com/SanketKuwar/Covid-19-Project/blob/main/Covid%2019%20Images/Hospital_Transformation.png)
 
 A saga of transformational arts:
 - ✅ **Source Transformation:** Extracting data from various sources for manipulation.
@@ -78,12 +86,16 @@ A saga of transformational arts:
 - ✅ **Sort Transformation:** Mastering effective data sorting techniques.
 - ✅ **Sink Transformation:** Guiding transformed data to its destination efficiently.
 - ✅ **Create ADF Pipeline:** The birth of an Azure Data Factory pipeline for streamlined transformation.
+  
+<img align="right" height="235" width="400" alt="" src="https://github.com/SanketKuwar/Covid-19-Project/blob/main/Covid%2019%20Images/HD_insight.png" />
 
 ### 2. Transformation using HDInsight
 
 - ✅ **Create HDInsight Cluster:** Initiating the creation of an HDInsight cluster, a crucial step for unleashing HDInsight activity within Data Factory.
 - ✅ **Create ADF Pipeline with Hive Activity:** Structuring components into an Azure Data Factory pipeline, incorporating the Hive activity for data transformation.
 - ✅ **Delete HDInsight Cluster:** The importance of tidying up – deleting the HDInsight cluster when not in use.
+  
+<img align="right" height="235" width="400" alt="" src="https://github.com/SanketKuwar/Covid-19-Project/blob/main/Covid%2019%20Images/project1.png" />
 
 ### 3. Transformation using DataBricks
 
