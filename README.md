@@ -109,4 +109,6 @@ The magic of Azure Databricks unfolds:
 
   🔗  [DataBricks Transformation Code](https://github.com/SanketKuwar/Covid-19-Project/blob/main/Code_transform_population_data.py)
 
-## DATA VISULISATION ( POWER BI )
+## DATA VISUALIZATION ( POWER BI )
+
+![Project Image](https://github.com/SanketKuwar/Covid-19-Project/blob/main/PowerBI_Reports_Covid19/PowerBI_Reports_Covid19.png)
