@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid19-reporting-adf-shk"
+		},
+		"ls_ablob_covidreportingsa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdl_accountKey": {
+			"value": ""
+		},
+		"ls_db_covid_cluster_accessToken": {
+			"value": ""
+		},
+		"ls_sql_covid_db_password": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdl_properties_typeProperties_url": {
+			"value": "https://covidreportingdlshk.dfs.core.windows.net/"
+		},
+		"ls_db_covid_cluster_properties_typeProperties_existingClusterId": {
+			"value": "0525-124917-8ggocbeo"
+		},
+		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"ls_sql_covid_db_properties_typeProperties_server": {
+			"value": "covid-srv-shk.database.windows.net"
+		},
+		"ls_sql_covid_db_properties_typeProperties_database": {
+			"value": "covid-db"
+		},
+		"ls_sql_covid_db_properties_typeProperties_userName": {
+			"value": "adm"
+		},
+		"tr_population_data_arrived_properties_typeProperties_scope": {
+			"value": "/subscriptions/e6c4eb07-eed3-4ae4-9a8a-df7cda452bf8/resourceGroups/Covid19DataFactoryProject/providers/Microsoft.Storage/storageAccounts/covidreportingsashk"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
