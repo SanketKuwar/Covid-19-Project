@@ -1,0 +1,51 @@
+trigger:
+  branches:
+    include:
+    - main
+variables:
+- name: subscriptionId
+  value: 'e6c4eb07-eed3-4ae4-9a8a-df7cda452bf8'
+- name: resourceGroup
+  value: 'dev-ci-cd-demo-rg'
+- name: dataFactory
+  value: 'dev-ci-cd-demo-rg-shk'
+- name: PackageFolder
+  value: 'build'
+- name: adfRootFolder
+  value: ''
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '14.x'
+      displayName: 'Install Node.js'
+    - task: Npm@1
+      inputs:
+        command: 'install'
+        workingDir: '$(Build.Repository.LocalPath)/$(packageFolder)'
+        verbose: true
+      displayName: 'Install npm packages'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        workingDir: '$(Build.Repository.LocalPath)/build'
+        customCommand: 'run build validate $(Build.Repository.LocalPath)/$(adfRootFolder) /subscriptions/$(subscriptionId)/resourceGroups/$(resourceGroup)/providers/Microsoft.DataFactory/factories/$(dataFactory)'
+      displayName: 'Validate Data Factory Resources'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        workingDir: '$(Build.Repository.LocalPath)/build'
+        customCommand: 'run build export $(Build.Repository.LocalPath)/$(adfRootFolder) /subscriptions/$(subscriptionId)/resourceGroups/$(resourceGroup)/providers/Microsoft.DataFactory/factories/$(dataFactory) "ArmTemplate"'
+      displayName: 'Generate ARM template'
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Build.Repository.LocalPath)/$(packageFolder)/ArmTemplate'
+        artifact: 'ArmTemplates'
+        publishLocation: 'pipeline'
+      displayName: 'Publish ARM tempate'
+
